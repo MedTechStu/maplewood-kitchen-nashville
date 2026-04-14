@@ -1,0 +1,131 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Maplewood Kitchen - Warm Rustic Modern Palette */
+  --background: #F5F5DC; /* Cream */
+  --foreground: #2D2418; /* Dark Oak */
+  --card: #FDFBF5; /* Warm White */
+  --card-foreground: #2D2418;
+  --popover: #FDFBF5;
+  --popover-foreground: #2D2418;
+  --primary: #A45C40; /* Deep Terracotta */
+  --primary-foreground: #FDFBF5;
+  --secondary: #D4A574; /* Earthy Oak */
+  --secondary-foreground: #2D2418;
+  --muted: #EDE8DC; /* Soft Cream */
+  --muted-foreground: #6B5D4A; /* Warm Gray */
+  --accent: #8B4D32; /* Darker Terracotta */
+  --accent-foreground: #FDFBF5;
+  --destructive: #B84233;
+  --destructive-foreground: #FDFBF5;
+  --border: #D4C9B5; /* Warm Border */
+  --input: #EDE8DC;
+  --ring: #A45C40;
+  --chart-1: #A45C40;
+  --chart-2: #D4A574;
+  --chart-3: #8B4D32;
+  --chart-4: #C4956A;
+  --chart-5: #6B5D4A;
+  --radius: 1.5rem; /* 24px exaggerated rounding */
+  --sidebar: #F5F5DC;
+  --sidebar-foreground: #2D2418;
+  --sidebar-primary: #A45C40;
+  --sidebar-primary-foreground: #FDFBF5;
+  --sidebar-accent: #EDE8DC;
+  --sidebar-accent-foreground: #2D2418;
+  --sidebar-border: #D4C9B5;
+  --sidebar-ring: #A45C40;
+}
+
+.dark {
+  --background: #1A1512;
+  --foreground: #F5F5DC;
+  --card: #2D2418;
+  --card-foreground: #F5F5DC;
+  --popover: #2D2418;
+  --popover-foreground: #F5F5DC;
+  --primary: #C97B5D;
+  --primary-foreground: #1A1512;
+  --secondary: #8B7355;
+  --secondary-foreground: #F5F5DC;
+  --muted: #3D3228;
+  --muted-foreground: #B8A896;
+  --accent: #C97B5D;
+  --accent-foreground: #1A1512;
+  --destructive: #B84233;
+  --destructive-foreground: #F5F5DC;
+  --border: #4A3D30;
+  --input: #3D3228;
+  --ring: #C97B5D;
+  --chart-1: #C97B5D;
+  --chart-2: #D4A574;
+  --chart-3: #8B4D32;
+  --chart-4: #C4956A;
+  --chart-5: #B8A896;
+  --sidebar: #1A1512;
+  --sidebar-foreground: #F5F5DC;
+  --sidebar-primary: #C97B5D;
+  --sidebar-primary-foreground: #1A1512;
+  --sidebar-accent: #3D3228;
+  --sidebar-accent-foreground: #F5F5DC;
+  --sidebar-border: #4A3D30;
+  --sidebar-ring: #C97B5D;
+}
+
+@theme inline {
+  --font-sans: 'Playfair Display', 'Georgia', serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
